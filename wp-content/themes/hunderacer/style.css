@@ -32,7 +32,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 #main-navigation-wrap {
     background: url("images/bg-main-menu.png") no-repeat scroll 0 0 transparent;
-    width: 1075px;
+    width: 1080px;
     padding: 6px 4px 10px 2px;
 }
 #main-navigation ul#menu-main-menu {
@@ -60,10 +60,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 {
     color: #FF8A00;
 }
-#main-navigation ul#menu-main-menu li.menu-item {
+#main-navigation ul#menu-main-menu li.menu-item ul.sub-menu {
     background: url("images/bg-drop-inner.png") repeat-y;
     width: 157px;
     padding: 0 2px;
     height: auto;
     overflow: hidden;
+}
+#main-navigation ul#menu-main-menu li.menu-item ul.sub-menu li {
+    float: left;
+    width: 100%;
+    padding: 0 0 2px;
+    background: url("images/bg-drop-menu-li.gif") repeat-x 0 100%;
 }
