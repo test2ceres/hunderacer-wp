@@ -66,10 +66,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 0 2px;
     height: auto;
     overflow: hidden;
+    display: none;
+    position: absolute;
+    top: 49px;
+    border-top: 1px solid #fff;
+    z-index: 500;
 }
 #main-navigation ul#menu-main-menu li.menu-item ul.sub-menu li {
     float: left;
     width: 100%;
     padding: 0 0 2px;
     background: url("images/bg-drop-menu-li.gif") repeat-x 0 100%;
+}
+.main-navigation-menu > .menu-item-has-children > a::after {
+    margin-top: 5px;
+    content: url("images/bg-active-menu.gif");
 }
