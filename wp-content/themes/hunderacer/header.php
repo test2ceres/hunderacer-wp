@@ -81,3 +81,5 @@
 		<?php wellington_breadcrumbs(); ?>
 
 		<div id="content" class="site-content container clearfix">
+            <div class="container-t"></div>
+            <div class="content-body-bg"><!-- Content body -->

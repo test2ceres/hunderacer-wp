@@ -10,7 +10,7 @@
 ?>
 
 	</div><!-- #content -->
-
+</div><!--Content body-->
 	<?php do_action( 'wellington_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">
@@ -26,6 +26,7 @@
 		</footer><!-- #colophon -->
 
 	</div>
+
 </div><!--.wrapper-page-->
 </div><!-- #page -->
 

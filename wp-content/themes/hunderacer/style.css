@@ -82,3 +82,65 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-top: 5px;
     content: url("images/bg-active-menu.gif");
 }
+#content {
+    background-color: #FAFAFA;
+}
+#content.site-content .content-body-bg {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 18px 40px 21px;
+    background: url("images/bg-content-area-cen.png") repeat-y 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    justify-content: space-between;
+}
+.content-body-bg:before {
+    display: table;
+    content: "";
+}
+.content-body-bg:after {
+    display: table;
+    content: "";
+}
+.container-t {
+    width: 1080px;
+    height: 5px;
+    background: url("images/bg-content-area-top.png") no-repeat 0 0;
+    line-height: 0;
+    font-size: 0;
+}
+.content-area  {
+    padding: 0;
+    width: 670px;
+}
+.sidebar {
+    padding: 3px;
+    width: 350px;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+}
+.sidebar aside.widget {
+    background-color: #F2F2F2;
+}
+.sidebar .widget-title {
+    width: 340px;
+    min-height: 33px;
+    padding: 20px 0 6px 10px;
+    background: url("images/bg-sidebar-tytle.gif") no-repeat 0 100%;
+    font: 24px/26px Tahoma,Arial,Helvetica,sans-serif;
+}
+#footer {
+    width: 1080px;
+    min-height: 193px;
+    overflow: hidden;
+    background: url("images/bg-footer.gif") no-repeat 0 0;
+}
+.widget {
+    margin: 0;
+    padding: 0 0 3em 0;
+}
