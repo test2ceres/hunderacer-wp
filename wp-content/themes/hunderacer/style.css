@@ -23,4 +23,47 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .header-main {
     padding: 15px 0 0 0;
+    margin-bottom: 5px;
+}
+#main-navigation {
+    color: #505050;
+    font-size: 12px;
+    line-height: 18px;
+}
+#main-navigation-wrap {
+    background: url("images/bg-main-menu.png") no-repeat scroll 0 0 transparent;
+    width: 1075px;
+    padding: 6px 4px 10px 2px;
+}
+#main-navigation ul#menu-main-menu {
+    height: 50px;
+    background: url("images/bg-menu-ul.png") repeat-x;
+}
+#main-navigation ul#menu-main-menu li.menu-item {
+    padding: 2px 2px 0 0;
+    background: url("images/bg-menu-mein-li.gif") no-repeat 100% 0;
+    height: 48px;
+}
+#main-navigation ul#menu-main-menu li.menu-item a {
+    font: bold 13.8px/33px "Hobo Std",Geneva,Tahoma,Arial,sans-serif;
+    color: #372B23;
+    padding: 4px 11px 10px;
+    float: left;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 #fff;
+    background: url("images/bg-menu-link.png") repeat-x;
+    display: block;
+    text-decoration: none;
+}
+#main-navigation ul#menu-main-menu li.menu-item a:hover, #main-navigation ul#menu-main-menu li.menu-item a:active, #main-navigation ul#menu-main-menu li.menu-item a:focus,
+#main-navigation ul#menu-main-menu li.current-menu-item a
+{
+    color: #FF8A00;
+}
+#main-navigation ul#menu-main-menu li.menu-item {
+    background: url("images/bg-drop-inner.png") repeat-y;
+    width: 157px;
+    padding: 0 2px;
+    height: auto;
+    overflow: hidden;
 }
