@@ -16,28 +16,7 @@ get_header(); ?>
 		// Display Magazine Homepage Widgets.
 		wellington_magazine_widgets();
 
-		if ( have_posts() ) :
-
-			wellington_blog_title(); ?>
-
-			<div id="post-wrapper" class="post-wrapper clearfix">
-
-				<?php while ( have_posts() ) : the_post();
-
-					get_template_part( 'template-parts/content' );
-
-				endwhile; ?>
-
-			</div>
-
-			<?php wellington_pagination(); ?>
-
-		<?php
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+		?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

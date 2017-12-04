@@ -34,6 +34,7 @@ if ( ! function_exists( 'hunderacer_more_link_slide' ) ) :
      * Displays the more link on slider post
      */
     function hunderacer_more_link_slide($titlePost, $exrt) {
+        wpdocs_custom_excerpt_length(50);
         ?>
         <p>
             <?php echo $exrt . '...';?>
@@ -50,7 +51,16 @@ endif;
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
-function wpdocs_custom_excerpt_length( ) {
+function wpdocs_custom_excerpt_length() {
     return 50;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+if ( ! function_exists( 'hunderacer_more_link' ) ) :
+    /**
+     * Displays the more link on slider post
+     */
+    function hunderacer_more_link($string, $limit) {
+        return wp_trim_words($string, $limit) . '<a href="' . esc_url( get_permalink() ) . '" class="more-slider-link">Læs mere »</a>';
+    }
+endif;

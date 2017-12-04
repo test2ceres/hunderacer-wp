@@ -9,14 +9,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post clearfix' ); ?>>
 
-	<?php wellington_post_image( 'wellington-thumbnail-medium' ); ?>
+	<?php wellington_post_image( 'hunderacer-thumbnail-list' ); ?>
 
 	<header class="entry-header">
-
-		<?php wellington_magazine_entry_date(); ?>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 	</header><!-- .entry-header -->
+    <div class="entry-content clearfix">
+        <?php echo hunderacer_more_link(get_the_excerpt(),15); ?>
 
+    </div><!-- .entry-content -->
 </article>
