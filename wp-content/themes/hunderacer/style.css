@@ -126,8 +126,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .sidebar aside.widget {
     background-color: #F2F2F2;
+    padding-bottom: 0;
 }
-.sidebar .widget-title {
+.sidebar .widget-title, .content-area .widget-title, .content-area .widget-title .category-archive-link {
     width: 340px;
     min-height: 33px;
     padding: 20px 0 6px 10px;
@@ -210,13 +211,14 @@ a:link, a:visited {
 .widget-magazine-posts-content .entry-title a:hover, .widget-magazine-posts-content .entry-title a:active, .widget-magazine-posts-content .entry-title a {
     font: 18px Tahoma,Arial,Helvetica,sans-serif;
     color: #000;
-    font-weight: normal;
+    font-weight: 400;
 }
 .widget-magazine-posts-content .entry-title a:hover, .widget-magazine-posts-content .entry-title a:active {
     text-decoration: underline;
 }
 #wellington-magazine-posts-grid-3 .widget-magazine-posts-content .entry-content, .cat-post-item p {
     font: 12px Tahoma,Arial,Helvetica,sans-serif;
+    color: #505050;
 }
 .wp-post-image {
     padding: 5px;
@@ -231,10 +233,68 @@ a:link, a:visited {
     display: block;
     color: #000;
     font-weight: normal;
-    font-size: 18px;
     font: 18px Tahoma,Arial,Helvetica,sans-serif;
 }
 .content-area .widget-header {
     padding: 7px 12px 12px 9px;
     background: url("images/bg-entry-title.png") no-repeat 0 0;
+}
+.textwidget, #category-posts-4-internal.category-posts-internal {
+    padding: 8px 10px 0px 12px;
+}
+.textwidget p {
+    margin: 0;
+}
+.textwidget form p label {
+    display: block;
+    font-weight: bold;
+    color: #505050;
+    font-size: 12px;
+    line-height: 18px;
+}
+.textwidget form#mc4wp-form-1 p input[type="text"], .textwidget form p input[type="email"]{
+    font: 100% arial,sans-serif;
+    vertical-align: middle;
+    border: 1px solid #BEBEBE;
+    max-width: 100%;
+    color: #666;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+    padding: 2px;
+}
+.textwidget form#mc4wp-form-1 p label.lbl-required:after {
+    content: "*";
+    color: red;
+}
+.widget-title {
+    color: #000000;
+}
+.textwidget form#mc4wp-form-1  .btn-newsletter-submit {
+    background: url("images/btn-unsub.png") no-repeat 0 0;
+    height: 25px;
+    width: 74px;
+    color: #454545;
+    line-height: 18px;
+    margin-right: 3px;
+    padding: 0;
+    font-size: 12px;
+}
+.sidebar .widget-title, .content-area .widget-title, .content-area .widget-title .category-archive-link {
+    color: #000000;
+}
+.content-area .widget-title .category-archive-link span.color-oragne{
+    color: #ff8a00;
+}
+#category-posts-4-internal .cat-post-title.post-title {
+    font: 12px Tahoma,Arial,Helvetica,sans-serif;
+    color: #000000;
+    font-weight: 700;
+    line-height: 18px;
+}
+.cat-post-item {
+    border-bottom: none;
+}
+.widget-header {
+    margin-bottom: 0;
 }
