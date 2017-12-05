@@ -34,6 +34,7 @@ if ( ! function_exists( 'hunderacer_more_link_slide' ) ) :
      * Displays the more link on slider post
      */
     function hunderacer_more_link_slide($titlePost, $exrt) {
+        wpdocs_custom_excerpt_length(50);
         ?>
         <p>
             <?php echo $exrt . '...';?>
