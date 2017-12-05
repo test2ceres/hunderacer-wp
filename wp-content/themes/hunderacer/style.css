@@ -24,6 +24,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .header-main {
     padding: 15px 0 0 0;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 #main-navigation {
     color: #505050;
@@ -145,6 +147,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 0 0 3em 0;
 }
 
+.header-widgets {
+    display: flex;
+    flex-direction: column;
+}
+
 .login {
 	padding: 0;
     margin: 0;
@@ -162,7 +169,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .login-username input,
 .login-password input {
-    width: 200px!important;
+    width: 100%!important;
 }
 
 .header-widget-title,
@@ -175,14 +182,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	display: none;
 }
 
-#wppb-submit {
-	width: 65px;
-    height: 35px;
-    padding: 0;
-	border-radius: 7px;
-}
-
 .login-register-lost-password {
 	margin: 0!important;
 	padding: 0!important;
 }
+
+.widget_search {
+    margin-left: 0;
+}
+
