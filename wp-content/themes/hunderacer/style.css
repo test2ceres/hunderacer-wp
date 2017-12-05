@@ -11,6 +11,15 @@ Tags: two-columns, blog, news, custom-background, custom-header, custom-logo, cu
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+body {
+    font: 12px/13px Tahoma,Arial,Helvetica,sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #505050;
+    background: #38291f url("images/bg-body.gif") repeat -15px 0
+}
 .site {
     background: transparent;
     margin: 0 auto;
@@ -86,6 +95,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 #content {
     background-color: #FAFAFA;
+    border-radius: 10px;
 }
 #content.site-content .content-body-bg {
     width: 100%;
@@ -265,7 +275,7 @@ a:link, a:visited {
     font-weight: normal;
     font: 18px Tahoma,Arial,Helvetica,sans-serif;
 }
-.content-area .widget-header {
+.content-area .widget-header, .content-area .archive-title {
     padding: 7px 12px 12px 9px;
     background: url("images/bg-entry-title.png") no-repeat 0 0;
 }
@@ -340,4 +350,82 @@ a:link, a:visited {
 .widget_search {
     margin-left: 0;
 }
+h1.archive-title{
+    font: 24px/26px Tahoma,Arial,Helvetica,sans-serif;
+    color: #000;
+}
+ul.dogs {
+    margin: 13px 0 0;
+    padding: 0;
+    list-style: none;
+}
+ul.dogs header.cate-item-title {
+    font: 14px/18px Tahoma,Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+}
 
+ul.dogs li div.img-block {
+    margin: 5px 9px 0 0;
+    width: 105px;
+    height: 80px;
+}
+ul.dogs li div.text {
+    float: left;
+}
+ul.dogs li {
+    width: 100%;
+    overflow: hidden;
+    padding: 6px 0 5px;
+    margin: 0;
+}
+.archive-content-item {
+    display: flex;
+}
+ul.dogs div.text h4 {
+    margin: 0;
+
+}
+ul.dogs div.text h4 a {
+    color: #00a0f0;
+}
+ul.dogs div.text h4 a, ul.dogs div.text div.entry-content {
+    font: 14px/18px Tahoma,Arial,Helvetica,sans-serif;
+}
+ul.dogs div.text div.entry-content {
+    font-size: 12px;
+}
+main#main .node a{
+    color:#00a0f0;
+}
+main#main .content .search-info a{
+    font-weight:normal;
+}
+.page-header {
+    margin-bottom: 0;
+}
+main#main .node h2 a,
+main#main .view-content h2 a,
+main#main .node h3 a,
+main#main .view-content h3 a{
+    color:#000;
+    font-weight:normal;
+}
+h3.blog-title{
+    border-bottom:1px solid #e3e3e3;
+    padding:0 0 5px;
+}
+.page-blog .links a,
+.page-free-blogs .links a{
+    margin-right:15px;
+}
+.facebook-like{
+    margin:9px 0 0;
+    padding:0 0 7px;
+}
+h3 {
+    font: 18px/20px Tahoma,Arial,Helvetica,sans-serif;
+    margin: 11px 0 0;
+}
