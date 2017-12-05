@@ -34,7 +34,6 @@ if ( ! function_exists( 'hunderacer_more_link_slide' ) ) :
      * Displays the more link on slider post
      */
     function hunderacer_more_link_slide($titlePost, $exrt) {
-        wpdocs_custom_excerpt_length(50);
         ?>
         <p>
             <?php echo $exrt . '...';?>
@@ -64,3 +63,13 @@ if ( ! function_exists( 'hunderacer_more_link' ) ) :
         return wp_trim_words($string, $limit) . '<a href="' . esc_url( get_permalink() ) . '" class="more-slider-link">Læs mere »</a>';
     }
 endif;
+
+//custom widget titles
+add_filter('widget_title', 'update_widget_title', 10, 3);
+function update_widget_title($title, $instance, $wid){
+    $arrTitle = explode(' ', $title);
+    if (count($arrTitle) == 2) {
+        $title = $arrTitle[0] . ' <span class="color-oragne">' . $arrTitle[1] . '</span>';
+    }
+    return $title;
+}

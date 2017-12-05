@@ -118,18 +118,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .content-area  {
     padding: 0;
-    width: 670px;
+    width: 67%;
 }
 .sidebar {
     padding: 3px;
-    width: 350px;
+    width: 33%;
     border: 1px solid #E9E9E9;
     border-radius: 5px;
 }
 .sidebar aside.widget {
     background-color: #F2F2F2;
+    padding-bottom: 0;
 }
-.sidebar .widget-title {
+.sidebar .widget-title, .content-area .widget-title, .content-area .widget-title .category-archive-link {
     width: 340px;
     min-height: 33px;
     padding: 20px 0 6px 10px;
@@ -146,25 +147,64 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin: 0;
     padding: 0 0 3em 0;
 }
-
+.bunner-box-b {
+    height: 5px;
+    background: url("images/bg-bunner-block-bot.png") no-repeat 0 0;
+}
+.bunner-box-t {
+    height: 5px;
+    background: url("images/bg-bunner-block-top.png") no-repeat 0 0;
+}
 .header-widgets {
     display: flex;
     flex-direction: column;
 }
-
+#post-slider-wrap {
+    overflow: hidden;
+    padding: 15px 2px 15px 15px;
+    background: url("images/bg-bunner-block-cen.png") repeat-y 0 0;
+}
+#post-slider-container .post-slider .zeeslide .slide-image-wrap {
+    background: transparent;
+}
+#post-slider-container {
+    margin-bottom: 5px;
+}
+#post-slider-container .post-slider .zeeslide .slide-image {
+    float: left;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #dadada;
+    background: url("images/bg-bunner-img.gif") repeat-x 0 100%;
+}
+#post-slider-container .post-slider .zeeslide .slide-content {
+    height: 1%;
+    margin: 15px 0 0;
+    float: left;
+    width: 460px;
+    position: inherit;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    background: transparent;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
 .login {
-	padding: 0;
+    padding: 0;
     margin: 0;
 }
 
 #loginform {
-	display: flex;
-	height: 37px!important;
+    display: flex;
+    height: 37px!important;
 }
-
+.post-slider-controls {
+    display: none;
+}
 .login-username,
 .login-password {
-	margin-right: 15px!important;
+    margin-right: 15px!important;
 }
 
 .login-username input,
@@ -177,14 +217,124 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .login-password label {
     display:none;
 }
+.slide-content .entry-content p{
+    font: 12px/17px Tahoma,Arial,Helvetica,sans-serif;
+    color: #7a7676;
+}
+.more-slider-link:link, .more-slider-link:visited, .cat-post-excerpt-more:link, .cat-post-excerpt-more:visited {
+    color: #00a0f0;
+}
+.post-slider .zeeslide .slide-content .slide-title {
+    margin-bottom: 20px;
+}
+.post-slider .zeeslide .slide-content .slide-title a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+a:link, a:visited {
+    color: #000000;
+}
+.color-oragne {
+    color: #ff8a00;
+}
 
+.widget-magazine-posts-content .entry-title a:hover, .widget-magazine-posts-content .entry-title a:active, .widget-magazine-posts-content .entry-title a {
+    font: 18px Tahoma,Arial,Helvetica,sans-serif;
+    color: #000;
+    font-weight: 400;
+}
+.widget-magazine-posts-content .entry-title a:hover, .widget-magazine-posts-content .entry-title a:active {
+    text-decoration: underline;
+}
+#wellington-magazine-posts-grid-3 .widget-magazine-posts-content .entry-content, .cat-post-item p {
+    font: 12px Tahoma,Arial,Helvetica,sans-serif;
+    color: #505050;
+}
+.wp-post-image {
+    padding: 5px;
+    margin-bottom: 0;
+    border: 1px solid #dadada;
+    background: #fff url("images/bg-box.gif") repeat-x 0 100%;
+}
+.cat-post-item {
+    margin-top: 0;
+}
+#category-posts-3-internal .cat-post-item .post-title.cat-post-title {
+    display: block;
+    color: #000;
+    font-weight: normal;
+    font: 18px Tahoma,Arial,Helvetica,sans-serif;
+}
+.content-area .widget-header {
+    padding: 7px 12px 12px 9px;
+    background: url("images/bg-entry-title.png") no-repeat 0 0;
+}
+.textwidget, #category-posts-4-internal.category-posts-internal {
+    padding: 8px 10px 0px 12px;
+}
+.textwidget p {
+    margin: 0;
+}
+.textwidget form p label {
+    display: block;
+    font-weight: bold;
+    color: #505050;
+    font-size: 12px;
+    line-height: 18px;
+}
+.textwidget form#mc4wp-form-1 p input[type="text"], .textwidget form p input[type="email"]{
+    font: 100% arial,sans-serif;
+    vertical-align: middle;
+    border: 1px solid #BEBEBE;
+    max-width: 100%;
+    color: #666;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+    padding: 2px;
+}
+.textwidget form#mc4wp-form-1 p label.lbl-required:after {
+    content: "*";
+    color: red;
+}
+.widget-title {
+    color: #000000;
+}
+.textwidget form#mc4wp-form-1  .btn-newsletter-submit {
+    background: url("images/btn-unsub.png") no-repeat 0 0;
+    height: 25px;
+    width: 74px;
+    color: #454545;
+    line-height: 18px;
+    margin-right: 3px;
+    padding: 0;
+    font-size: 12px;
+}
+.sidebar .widget-title, .content-area .widget-title, .content-area .widget-title .category-archive-link {
+    color: #000000;
+}
+.content-area .widget-title .category-archive-link span.color-oragne{
+    color: #ff8a00;
+}
+#category-posts-4-internal .cat-post-title.post-title {
+    font: 12px Tahoma,Arial,Helvetica,sans-serif;
+    color: #000000;
+    font-weight: 700;
+    line-height: 18px;
+}
+.cat-post-item {
+    border-bottom: none;
+}
+.widget-header {
+    margin-bottom: 0;
+}
 .login-remember {
-	display: none;
+    display: none;
 }
 
 .login-register-lost-password {
-	margin: 0!important;
-	padding: 0!important;
+    margin: 0!important;
+    padding: 0!important;
 }
 
 .widget_search {
