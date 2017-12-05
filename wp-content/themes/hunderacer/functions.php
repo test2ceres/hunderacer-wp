@@ -24,7 +24,6 @@ function hunderacer_add_image_sizes() {
     // Add different thumbnail sizes for Magazine Posts widgets.
     add_image_size( 'hunderacer-thumbnail-list', 190, 130, true );
     add_image_size( 'hunderacer-thumbnail-detail', 190, 190, true );
-    add_image_size( 'hunderacer-thumbnail-cate', 90, 80, true );
 
 }
 add_action( 'after_setup_theme', 'hunderacer_add_image_sizes' );
@@ -74,29 +73,4 @@ function update_widget_title($title, $instance, $wid){
         $title = $arrTitle[0] . ' <span class="color-oragne">' . $arrTitle[1] . '</span>';
     }
     return $title;
-}
-
-add_filter( 'get_the_archive_title', function ($title) {
-
-    if ( is_category() ) {
-
-        $title = single_cat_title( '', false );
-        if (strpos ($title, '-') !== false) {
-            $title = str_replace('–', '<span class="color-oragne">-', $title) . '</span>';
-        }
-        if (strpos ($title, '&#8211;') !== false) {
-            $title = str_replace('&#8211;', '<span class="color-oragne">-', $title) . '</span>';
-        }
-    } elseif ( is_tag() ) {
-
-        $title = single_tag_title( '', false );
-
-    } elseif ( is_author() ) {
-
-        $title = '<span class="vcard">' . get_the_author() . '</span>' ;
-
-    }
-
-    return $title;
-
-});
+}add_filter('widget_title', 'update_widget_title', 10, 3);
