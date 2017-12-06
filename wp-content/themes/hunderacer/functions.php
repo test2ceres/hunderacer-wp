@@ -56,7 +56,7 @@ endif;
 
 //custom widget titles
 add_filter('widget_title', 'update_widget_title', 10, 3);
-function update_widget_title($title, $instance, $wid){
+function update_widget_title($title){
     $arrTitle = explode(' ', $title);
     if (count($arrTitle) == 2) {
         $title = $arrTitle[0] . ' <span class="color-oragne">' . $arrTitle[1] . '</span>';
