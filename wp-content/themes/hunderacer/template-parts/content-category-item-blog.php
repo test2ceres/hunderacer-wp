@@ -18,7 +18,11 @@
     </div>
 
     <div class="content-blog-lists">
-        <?php wellington_slider_image( 'hunderacer-thumbnail-list', array( 'class' => 'img-blog-item' ) ); ?>
+        <?php
+        if (has_post_thumbnail()) {
+            wellington_slider_image( 'hunderacer-thumbnail-list', array( 'class' => 'img-blog-item' ) );
+        }
+        ?>
         <div class="short-desc">
             <?php echo hunderacer_more_link(get_the_excerpt(),78); ?>
         </div>
