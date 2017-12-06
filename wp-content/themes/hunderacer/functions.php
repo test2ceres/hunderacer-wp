@@ -88,3 +88,29 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+if ( ! function_exists( 'hunderacer_entry_meta' ) ) :
+    /**
+     * Displays the date, author and categories of a post
+     * <div class="meta">
+    <div class="submitted">Skrevet af <a href="/brugere/admin/" title="View user profile.">admin</a> på Wed, 2017-05-31</div>
+
+    <div class="terms terms-inline">
+    Kategori: 		  <ul class="links inline"><li class="taxonomy_term_734 first last"><a href="/category/blog/nyheder/" rel="tag" title="nyheder">Nyheder</a></li>
+    </ul>		</div>
+    </div>
+     */
+    function hunderacer_entry_meta() {
+
+       echo '<div class="meta"><div class="submitted">Skrevet af ';
+       the_author_posts_link();
+       echo ' på ';
+        the_time('D, Y-m-d');
+        echo  '</div>';
+
+                echo '<div class="terms terms-inline">
+                    Kategori: ' .  get_the_tag_list() . '
+                </div>
+            </div>';
+    }
+endif;
