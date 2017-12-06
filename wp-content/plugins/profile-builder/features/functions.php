@@ -1024,3 +1024,22 @@ function wppb_build_redirect( $redirect_url, $redirect_delay, $redirect_type = N
 function wppb_sanitize_value( $string ){
 	return preg_replace( '/<script\b[^>]*>(.*?)<\/script>/is', '', $string );
 }
+
+/**
+ * Function that receives a user role and returns it's label.
+ * Returns the original role if not found.
+ *
+ * @since v.2.7.1
+ *
+ * @param string $role
+ *
+ * @return string
+ */
+function wppb_get_role_name($role){
+    global $wp_roles;
+
+    if ( array_key_exists( $role, $wp_roles->role_names ) )
+        return $wp_roles->role_names[$role];
+
+    return $role;
+}

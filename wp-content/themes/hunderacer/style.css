@@ -459,3 +459,9 @@ h3 {
 section aside.widget {
     padding: 0 15px;
 }
+ul#recentcomments {
+
+}
+.widget_facebook_page_plugin_widget {
+    padding-top: 15px !important;
+}

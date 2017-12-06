@@ -182,7 +182,10 @@ function wppb_content_restriction_add_post_preview( $message, $content, $post, $
     // More tag
     if( $preview_option == 'more-tag' ) {
         $content_parts = get_extended( $post->post_content );
-        $preview       = $content_parts['main'];
+
+        if( ! empty( $content_parts['extended'] ) ) {
+            $preview = $content_parts['main'];
+        }
     }
 
     // Return the preview
