@@ -176,10 +176,10 @@ body {
     height: 5px;
     background: url("images/bg-bunner-block-top.png") no-repeat 0 0;
 }
-.header-widgets {
+/*.header-widgets {
     display: flex;
     flex-direction: column;
-}
+}*/
 #post-slider-wrap {
     overflow: hidden;
     padding: 15px 2px 15px 15px;
@@ -230,7 +230,20 @@ body {
 
 .login-username input,
 .login-password input {
-    width: 100%!important;
+    width: 174px!important;
+    height: 37px;
+    float: left;
+    margin: 0 0 0 3px;
+    padding: 5px 10px 0 10px;
+    background: url(images/bg-login.gif) no-repeat 0 0;
+    font: 11px/13px Tahoma,Arial,Helvetica,sans-serif;
+    color: #b07e5b!important;
+    border: 0!important;
+}
+
+.login-username input:focus,
+.login-password input::focus {
+
 }
 
 .header-widget-title,
@@ -464,4 +477,27 @@ ul#recentcomments {
 }
 .widget_facebook_page_plugin_widget {
     padding-top: 15px !important;
+}
+
+.search-form .search-field {
+    background: transparent;
+    border: 0!important;
+    color: #b07e5b!important;
+    height: 20px!important;
+}
+
+.search-form {
+    background: url(images/bg-search.gif) no-repeat;
+    float: right;
+    height: 35px;
+    width: 434px;
+    padding: 8px 5px 11px 12px;
+    margin: 13px 0 0;
+    background-size: cover;
+}
+
+.search-form .search-submit {
+    background: transparent;
+    padding: 0;
+    margin: 5px;
 }
