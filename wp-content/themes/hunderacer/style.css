@@ -24,8 +24,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .header-main {
     padding: 15px 0 0 0;
     margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
 }
 #main-navigation {
     color: #505050;
