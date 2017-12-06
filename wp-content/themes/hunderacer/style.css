@@ -241,11 +241,6 @@ body {
     border: 0!important;
 }
 
-.login-username input:focus,
-.login-password input::focus {
-
-}
-
 .header-widget-title,
 .login-username label,
 .login-password label {
