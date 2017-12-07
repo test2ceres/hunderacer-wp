@@ -29,7 +29,11 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-        <?php do_shortcode('[hunderacer_multiple_images]'); ?>
+        <?php
+        if (is_category('hunderacer')):
+        do_shortcode('[hunderacer_multiple_images]');
+        endif;
+        ?>
 		<?php //wellington_entry_categories(); ?>
 		<?php //wellington_entry_tags(); ?>
 		<?php //do_action( 'wellington_author_bio' ); ?>
