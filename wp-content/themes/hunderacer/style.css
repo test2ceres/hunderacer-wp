@@ -572,3 +572,18 @@ ul#recentcomments {
     float:right;
     margin-top:2px;
 }
+.hunderacer-image-features {
+    list-style: none;
+    margin: 0 15px;
+    padding: 0;
+}
+.hunderacer-image-features li {
+    float: left;
+}
+.hunderacer-image-features li img{
+    float: left;
+    padding: 5px;
+    margin: 0 16px 15px 0;
+    border: 1px solid #dadada;
+    background: url("images/bg-bunner-img.gif") repeat-x 0 100%;
+}

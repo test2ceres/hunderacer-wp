@@ -140,3 +140,53 @@ if ( ! function_exists( 'hunderacer_get_features_post' ) ) :
         }
     }
 endif;
+
+/*  Short Codes Image Features */
+// Add Shortcode
+function hunderacer_image_features( $atts ) {
+
+    // Attributes
+    extract(shortcode_atts( array('post_id' => get_the_ID()), $atts));
+
+    $value = get_post_meta($post_id, '_multi_img_array', true);
+    if($value)
+    {
+        $temp = explode(",", $value);
+        ?>
+        <div id="widget_photo_wrapper">
+            <div class="widget_photo_content">
+                <ul class="hunderacer-image-features">
+                    <?php
+                    if ($temp)
+                    {
+                        $ind = 0;
+                        foreach ( $temp as $t_val )
+                        {
+                            if(wp_get_attachment_url($t_val))
+                            {
+                                ?>
+                                <li><a href="<?php echo wp_get_attachment_url($t_val); ?>" rel="lightbox[gallery-0]"><?php echo wp_get_attachment_image($t_val , 'hunderacer-thumbnail-detail'); ?></a></li>
+                            <?php
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if(wp_get_attachment_url($t_val))
+                        {
+                            ?>
+                            <li><a href="<?php echo wp_get_attachment_url($t_val); ?>" rel="lightbox[gallery-0]"><?php echo wp_get_attachment_image($value , 'hunderacer-thumbnail-detail'); ?></a></li>
+                        <?php
+                        }
+                    }
+                    ?>
+
+                </ul>
+            </div>
+        </div>
+    <?php
+    }
+
+}
+
+add_shortcode( 'hunderacer_multiple_images', 'hunderacer_image_features' );
