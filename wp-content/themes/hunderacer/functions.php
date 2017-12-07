@@ -128,7 +128,7 @@ if ( ! function_exists( 'hunderacer_get_features_post' ) ) :
      */
     function hunderacer_get_features_post($postID) {
         $metaFeatures = get_field_objects($postID);
-        if (sizeof($metaFeatures) > 0) {
+        if (count($metaFeatures) > 0) {
             echo '<div class="rate-block-wrapper"><div class="rate-block"><div class="rate-block-top"></div><div class="rate-block-cen"><h4>' . __('Hunderacens Egenskaber:', 'hunderacer') . '</h4><ul>';
             foreach ( $metaFeatures as $key => $fieldArr ) {
                 if (in_array($key, array('size', 'dominans', 'care', 'egnet_som_familiehund', 'lydighed'))) {
