@@ -114,3 +114,29 @@ if ( ! function_exists( 'hunderacer_entry_meta' ) ) :
             </div>';
     }
 endif;
+
+if ( ! function_exists( 'hunderacer_get_features_post' ) ) :
+    /**
+     * Displays the features of posts.
+     * <div class="meta">
+    <div class="submitted">Skrevet af <a href="/brugere/admin/" title="View user profile.">admin</a> på Wed, 2017-05-31</div>
+
+    <div class="terms terms-inline">
+    Kategori: 		  <ul class="links inline"><li class="taxonomy_term_734 first last"><a href="/category/blog/nyheder/" rel="tag" title="nyheder">Nyheder</a></li>
+    </ul>		</div>
+    </div>
+     */
+    function hunderacer_get_features_post($postID) {
+        $metaFeatures = get_field_objects($postID);
+        if (sizeof($metaFeatures > 0)) {
+            echo '<div class="rate-block-wrapper"><div class="rate-block"><div class="rate-block-top"></div><div class="rate-block-cen"><h4>' . __('Hunderacens Egenskaber:', 'hunderacer') . '</h4><ul>';
+            foreach ( $metaFeatures as $key => $fieldArr ) {
+                if (in_array($key, array('size', 'dominans', 'care', 'egnet_som_familiehund', 'lydighed'))) {
+                    $value = !empty ($fieldArr['value']) ? $fieldArr['value'] : $fieldArr['default_value'];
+                    echo '<li>' . '<img src=" ' . get_stylesheet_directory_uri() . '/images/rate-2-' . $value . '.png" />' . $fieldArr['label'] .  '</li>';
+                }
+            }
+            echo '</ul></div><div class="rate-block-bot"></div></div></div>';
+        }
+    }
+endif;

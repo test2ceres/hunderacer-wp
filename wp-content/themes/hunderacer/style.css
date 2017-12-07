@@ -33,6 +33,10 @@ body {
     color: #505050;
     background: #38291f url("images/bg-body.gif") repeat -15px 0
 }
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    background: #3D2C21;
+    color: #FFFFFF;
+}
 .site {
     background: transparent;
     margin: 0 auto;
@@ -228,10 +232,10 @@ body {
     margin-right: 15px!important;
 }
 
-.login-username input,
-.login-password input {
+#loginform .login-username input,
+#loginform .login-password input {
     width: 174px!important;
-    height: 37px;
+    height: 30px;
     float: left;
     margin: 0 0 0 3px;
     padding: 5px 10px 0 10px;
@@ -474,14 +478,15 @@ ul#recentcomments {
     padding-top: 15px !important;
 }
 
-.search-form .search-field {
+.header-widget .search-form .search-field {
     background: transparent;
     border: 0!important;
     color: #b07e5b!important;
     height: 20px!important;
+    padding: 0;
 }
 
-.search-form {
+.header-widget .search-form {
     background: url(images/bg-search.gif) no-repeat;
     float: right;
     height: 35px;
@@ -491,8 +496,79 @@ ul#recentcomments {
     background-size: cover;
 }
 
-.search-form .search-submit {
+.header-widget .search-form .search-submit {
     background: transparent;
     padding: 0;
     margin: 5px;
+    width: 25px;
+    height: 25px;
+}
+.header-widget .search-form .search-submit .genericon-search {
+    display: none;
+}
+.more-link {
+    background-color: #463326;
+}
+.login-register-lost-password a {
+    color: #b07e5b;
+}
+.login-register-lost-password a:first-child {
+    margin-left: 10px;
+}
+.header-widget .search-form .search-field {
+    width: 345px;
+    padding: 0;
+    font: 12px/14px Tahoma,Arial,Helvetica,sans-serif;
+}
+.entry-categories .meta-categories a {
+    background: #463326;
+}
+.custom-title-hunderacer {
+    padding: 7px 12px 12px 9px;
+    background: url("images/bg-entry-title.png") no-repeat 0 0;
+
+}
+
+.rate-block-wrapper{
+    float:right;
+    height:202px;
+    width:430px;
+    padding: 0 22px 0 0;
+}
+.rate-block{
+    float:right;
+    width: 240px;
+    font-size:10px;
+}
+
+.rate-block-top{
+    background: url("images/bg-rate-block-top.png") no-repeat 0 0 transparent;
+    height:5px;
+}
+.rate-block-cen {
+    background: url("images/bg-rate-block-cen.png") repeat-y 0 0 transparent;
+    font-size:10px;
+    overflow:hidden;
+}
+.rate-block-bot{
+    background: url("images/bg-rate-block-bot.png") no-repeat 0 0 transparent;
+    height:5px;
+}
+.rate-block h4{
+    color:#00a0f0;
+    margin:0;
+    padding:0 12px;
+}
+.rate-block ul{
+    list-style:none outside none;
+    margin:4px 0 -2px;
+    padding:0;
+}
+.rate-block ul li{
+    padding:3px 10px 3px 10px;
+    background:url("images/bg-info-block-item.gif") bottom repeat-x transparent;
+}
+.rate-block ul li img{
+    float:right;
+    margin-top:2px;
 }

@@ -11,7 +11,7 @@
 	<label>
 		<span class="screen-reader-text"><?php echo esc_html_x( 'Search for:', 'label', 'wellington' ); ?></span>
 		<input type="search" class="search-field"
-			placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'wellington' ); ?>"
+			placeholder="<?php echo esc_attr_x( 'Søg &hellip;', 'placeholder', 'wellington' ); ?>"
 			value="<?php echo get_search_query(); ?>" name="s"
 			title="<?php echo esc_attr_x( 'Search for:', 'label', 'wellington' ); ?>" />
 	</label>

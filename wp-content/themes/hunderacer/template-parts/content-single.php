@@ -9,16 +9,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php wellington_post_image_single(); ?>
-
 	<header class="entry-header">
-
-		<?php wellington_entry_meta(); ?>
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+		<?php the_title( '<h1 class="entry-title custom-title-hunderacer">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+    <div class="entry-image-features">
+        <?php wellington_post_image_single(); ?>
 
+        <?php hunderacer_get_features_post(get_the_ID()); ?>
+    </div>
 	<div class="entry-content clearfix">
 
 		<?php the_content(); ?>
@@ -32,10 +30,10 @@
 
 	<footer class="entry-footer">
 
-		<?php wellington_entry_categories(); ?>
-		<?php wellington_entry_tags(); ?>
-		<?php do_action( 'wellington_author_bio' ); ?>
-		<?php wellington_post_navigation(); ?>
+		<?php //wellington_entry_categories(); ?>
+		<?php //wellington_entry_tags(); ?>
+		<?php //do_action( 'wellington_author_bio' ); ?>
+		<?php //wellington_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
 
