@@ -9,9 +9,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title custom-title-hunderacer">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+    <header class="entry-header">
+        <h1 class="custom-title-hunderacer blog-size-title">
+            <?php
+            echo the_hunderacer_title_articles(get_the_title()); ?>
+        </h1>
+    </header>
     <div class="entry-image-features">
         <?php wellington_post_image_single(); ?>
 
