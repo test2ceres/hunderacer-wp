@@ -24,7 +24,7 @@
         }
         ?>
         <div class="short-desc">
-            <?php echo hunderacer_more_link(get_the_excerpt(),78); ?>
+            <?php echo hunderacer_more_link(strip_tags(get_the_content()),70); ?>
         </div>
     </div>
 </div><!-- entry of blog -->

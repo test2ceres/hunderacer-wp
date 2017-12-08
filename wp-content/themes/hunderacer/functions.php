@@ -50,7 +50,7 @@ if ( ! function_exists( 'hunderacer_more_link' ) ) :
      * Displays the more link on slider post
      */
     function hunderacer_more_link($string, $limit) {
-        return wp_trim_words($string, $limit) . '<a href="' . esc_url( get_permalink() ) . '" class="more-slider-link">Læs mere »</a>';
+        return wp_trim_words($string, $limit, '.') . ' <br/><a href="' . esc_url( get_permalink() ) . '" class="more-slider-link">Læs mere »</a>';
     }
 endif;
 
@@ -115,6 +115,21 @@ if ( ! function_exists( 'hunderacer_entry_meta' ) ) :
     }
 endif;
 
+if ( ! function_exists( 'hunderacer_article_meta' ) ) :
+    /**
+     * Displays the date of a post
+     *
+    <div class="views-field-created"><span class="field-content"><span class="field-content">Posted on Man, 2017-12-04</span></span>
+    </div>
+     */
+    function hunderacer_article_meta() {
+
+        echo ' <div class="views-field-created"><span class="field-content"><span class="field-content">Posted on ';
+        the_time('D, Y-m-d');
+        echo '</span></span></div>';
+    }
+endif;
+
 if ( ! function_exists( 'hunderacer_get_features_post' ) ) :
     /**
      * Displays the features of posts.
@@ -128,7 +143,7 @@ if ( ! function_exists( 'hunderacer_get_features_post' ) ) :
      */
     function hunderacer_get_features_post($postID) {
         $metaFeatures = get_field_objects($postID);
-        if (count($metaFeatures) > 0) {
+        if (is_array($metaFeatures) && count($metaFeatures) > 0) {
             echo '<div class="rate-block-wrapper"><div class="rate-block"><div class="rate-block-top"></div><div class="rate-block-cen"><h4>' . __('Hunderacens Egenskaber:', 'hunderacer') . '</h4><ul>';
             foreach ( $metaFeatures as $key => $fieldArr ) {
                 if (in_array($key, array('size', 'dominans', 'care', 'egnet_som_familiehund', 'lydighed'))) {
@@ -190,3 +205,25 @@ function hunderacer_image_features( $atts ) {
 }
 
 add_shortcode( 'hunderacer_multiple_images', 'hunderacer_image_features' );
+
+/***
+ * function to get title of the articles and news
+*/
+ function the_hunderacer_title_articles($title)
+ {
+     $titleArr = explode(' ', $title);
+     if (count($titleArr) > 0) {
+         $titleNew = '';
+         foreach ($titleArr as $k => $text) {
+            if ($k == 1 ) {
+                $titleNew .= '<span>' . $text. ' ';
+             }elseif ($k == (count($titleArr) - 1)) {
+                 $titleNew .= ' ' . $text . '</span>';
+             } else{
+                 $titleNew .= $text . ' ';
+             }
+         }
+        return $titleNew;
+     }
+     return $title;
+ }

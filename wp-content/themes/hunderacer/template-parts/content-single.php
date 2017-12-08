@@ -9,36 +9,26 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title custom-title-hunderacer">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-    <div class="entry-image-features">
-        <?php wellington_post_image_single(); ?>
-
-        <?php hunderacer_get_features_post(get_the_ID()); ?>
+    <header class="entry-header">
+        <h1 class="custom-title-hunderacer blog-size-title">
+            <?php
+            echo the_hunderacer_title_articles(get_the_title()); ?>
+        </h1>
+    </header><!-- .entry-header -->
+    <div class="meta">
+        <?php hunderacer_article_meta();?>
     </div>
-	<div class="entry-content clearfix">
+    <div class="entry-content clearfix">
+        <?php the_content(); ?>
+    </div><!-- .entry-content -->
 
-		<?php the_content(); ?>
+    <footer class="entry-footer">
 
-		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wellington' ),
-			'after'  => '</div>',
-		) ); ?>
+        <?php wellington_entry_categories(); ?>
+        <?php wellington_entry_tags(); ?>
+        <?php do_action( 'wellington_author_bio' ); ?>
+        <?php wellington_post_navigation(); ?>
 
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-        <?php
-        if (is_category('hunderacer')):
-        do_shortcode('[hunderacer_multiple_images]');
-        endif;
-        ?>
-		<?php //wellington_entry_categories(); ?>
-		<?php //wellington_entry_tags(); ?>
-		<?php //do_action( 'wellington_author_bio' ); ?>
-		<?php //wellington_post_navigation(); ?>
-
-	</footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
 
 </article>

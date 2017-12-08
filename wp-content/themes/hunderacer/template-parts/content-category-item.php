@@ -13,7 +13,7 @@
         <div class="text">
                 <?php the_title( sprintf( '<h4><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
             <div class="entry-content clearfix">
-                <?php echo hunderacer_more_link(get_the_excerpt(),40); ?>
+                <?php echo hunderacer_more_link(strip_tags(get_the_content()),75); ?>
             </div><!-- .entry-content -->
         </div>
     </div>
