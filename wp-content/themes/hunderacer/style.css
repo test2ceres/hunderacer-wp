@@ -288,6 +288,8 @@ a:link, a:visited {
     margin-bottom: 0;
     border: 1px solid #dadada;
     background: #fff url("images/bg-box.gif") repeat-x 0 100%;
+    max-width: inherit;
+    height: inherit;
 }
 .cat-post-item {
     margin-top: 0;
@@ -726,12 +728,12 @@ ul#recentcomments {
     color:#b07e5b;
 }
 .copyright{
-    width:1070px;
+    width:1080px;
     height:32px;
     overflow:hidden;
     background:url(images/bg-copyright.gif) no-repeat 0 0;
     padding:0 0 0 12px;
-    margin-top:29px;
+    margin-top:0px;
 }
 .copyright p{
     font:12px/30px Tahoma, Arial, Helvetica, sans-serif;
