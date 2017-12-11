@@ -13,8 +13,8 @@ Author URI: http://www.facebook.com/adilali.pk
 /*  Add Script and CSS  */
 function mip_method() {
 	wp_enqueue_script(
-		'mip-script',
-		'prettyphoto/jquery.prettyPhoto.min',
+		'map-script',
+		'/wp-content/plugins/multiple-images-upload/prettyphoto/jquery.prettyPhoto.min.js',
 		array( 'jquery' )
 	);
 }
